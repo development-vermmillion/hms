@@ -9,7 +9,7 @@
             @csrf @if($editing) @method('PUT') @endif
             <div class="form-grid">
                 <div><label>Full name</label><input name="name" value="{{ old('name', $editing?->name) }}" required></div>
-                <div><label>Staff ID (entered on every entry)</label><input name="employee_code" value="{{ old('employee_code', $editing?->employee_code) }}" required></div>
+                <div><label>Staff ID (recorded automatically on every entry)</label><input name="employee_code" value="{{ old('employee_code', $editing?->employee_code) }}" required></div>
                 <div><label>Login e-mail</label><input type="email" name="email" value="{{ old('email', $editing?->email) }}" required></div>
                 <div><label>Phone</label><input name="phone" value="{{ old('phone', $editing?->phone) }}"></div>
                 <div><label>{{ $editing ? 'New password (leave blank to keep)' : 'Password (min 8)' }}</label><input type="password" name="password" autocomplete="new-password" {{ $editing ? '' : 'required' }}></div>

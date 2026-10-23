@@ -278,3 +278,7 @@ hr { border: 0; border-top: 1px solid var(--line); }
     th, td, .muted, .small { color: #111 !important; border-color: #ccc !important; }
     .pill { color: #111 !important; background: none !important; border-color: #999 !important; }
 }
+
+/* Staff ID is pre-filled from the login and cannot be edited */
+.staff-id input[readonly] { background: transparent; border-style: dashed; font-weight: 600; color: var(--maroon); cursor: default; }
+.staff-id input[readonly]:focus { border-color: rgba(42, 42, 42, .14); outline: none; }

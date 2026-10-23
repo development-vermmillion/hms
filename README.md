@@ -26,8 +26,8 @@ plain CSS (`public/css/liquid-glass.css`), so there is no front-end build step.
 
 ### Staff ID on every entry
 
-Each staff member has a **Staff ID** (employee code). Every form that creates or
-changes something asks for it, and it must match the logged-in account. Records
+Each staff member has a **Staff ID** (employee code). It is filled in automatically from the login on every form that creates or
+changes something, and the server checks it matches the logged-in account. Records
 store who did what (`created_by`, `checked_in_by`, `checked_out_by`, `received_by`,
 `issued_by`, `completed_by`…) so you can later see which employee served which
 service. Staff accounts are **disabled, never deleted**, so history stays intact.
