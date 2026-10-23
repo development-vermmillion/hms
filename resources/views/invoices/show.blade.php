@@ -26,7 +26,7 @@
             </div>
         </div>
 
-        <hr style="border:0;border-top:1px solid rgba(255,255,255,.2);margin:20px 0">
+        <hr style="margin:20px 0">
 
         <div class="grid g-2">
             <dl class="kv" style="grid-template-columns:90px 1fr">

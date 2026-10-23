@@ -25,7 +25,7 @@
         <section class="glass pad">
             <div class="row between"><h2>Room board</h2>
                 <div class="legend">
-                    @foreach(['available' => '#7ef0c2', 'occupied' => '#9bc4ff', 'reserved' => '#ffd86b', 'cleaning' => '#c1a8ff', 'maintenance' => '#ff9fa8'] as $s => $c)
+                    @foreach(['available' => '#2c7a58', 'occupied' => '#E10600', 'reserved' => '#b36b00', 'cleaning' => '#8E8886', 'maintenance' => '#5A0F0C'] as $s => $c)
                         <span><i style="background:{{ $c }}"></i>{{ ucfirst($s) }}</span>
                     @endforeach
                 </div>
