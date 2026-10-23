@@ -18,13 +18,13 @@
     --faint: #9a9391;
     --line: rgba(42, 42, 42, .10);
 
-    --glass-a: rgba(255, 255, 255, .72);
-    --glass-b: rgba(255, 255, 255, .38);
+    --glass-a: rgba(255, 255, 255, .92);
+    --glass-b: rgba(255, 255, 255, .62);
     --glass-border: rgba(255, 255, 255, .85);
     --blur: 24px;
     --radius: 24px;
     --radius-sm: 14px;
-    --shadow: 0 10px 34px rgba(42, 42, 42, .10), 0 2px 8px rgba(42, 42, 42, .05);
+    --shadow: 0 12px 32px rgba(42, 42, 42, .12), 0 2px 6px rgba(42, 42, 42, .06);
 
     /* functional colours, tuned to sit with the palette */
     --ok: #2c7a58;
@@ -44,27 +44,13 @@ body {
     min-height: 100vh;
     font: 15px/1.5 var(--sans);
     color: var(--text);
-    background: #f3f0ee;
+    background: #e9e7e6;
     -webkit-font-smoothing: antialiased;
 }
 
-/* ---- Soft living background (gives the glass something to refract) ---- */
-.bg {
-    position: fixed; inset: 0; z-index: -1; overflow: hidden;
-    background:
-        radial-gradient(900px 600px at 0% 0%, #fbf8f6 0%, transparent 70%),
-        linear-gradient(160deg, #f6f3f1 0%, #ece8e5 55%, #e4dfdc 100%);
-}
-.blob { position: absolute; border-radius: 50%; filter: blur(80px); animation: drift 28s ease-in-out infinite; }
-.blob.b1 { width: 460px; height: 460px; background: var(--red); opacity: .20; left: -110px; top: 6%; }
-.blob.b2 { width: 400px; height: 400px; background: var(--maroon); opacity: .16; right: 2%; top: -90px; animation-delay: -9s; }
-.blob.b3 { width: 520px; height: 520px; background: var(--taupe); opacity: .30; right: 16%; bottom: -170px; animation-delay: -16s; }
-.blob.b4 { width: 340px; height: 340px; background: var(--silver); opacity: .55; left: 36%; top: 34%; animation-delay: -5s; }
-@keyframes drift {
-    0%, 100% { transform: translate(0, 0) scale(1); }
-    33% { transform: translate(44px, -32px) scale(1.08); }
-    66% { transform: translate(-32px, 42px) scale(.94); }
-}
+/* ---- Plain solid background (light grey) ---- */
+.bg { position: fixed; inset: 0; z-index: -1; background: #e9e7e6; }
+.blob { display: none; }
 
 /* ---- The glass material ---- */
 .glass {
@@ -292,7 +278,7 @@ hr { border: 0; border-top: 1px solid var(--line); }
 @media (prefers-reduced-transparency: reduce) {
     .glass { background: #fff; -webkit-backdrop-filter: none; backdrop-filter: none; }
 }
-@media (prefers-reduced-motion: reduce) { .blob { animation: none; } * { transition: none !important; } }
+@media (prefers-reduced-motion: reduce) { .blob-unused { animation: none; } * { transition: none !important; } }
 
 /* ---- Print (invoices & reports) ---- */
 @media print {
